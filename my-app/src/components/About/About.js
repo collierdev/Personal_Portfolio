@@ -1,5 +1,5 @@
 import './About.css';
-import Skillbar from './Skillbar.js'
+import Skillbar from '../Skillbar/Skillbar.js'
   function About(props) {
     return (
       <>

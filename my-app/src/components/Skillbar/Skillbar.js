@@ -1,7 +1,7 @@
 import React from 'react'
 import Skill from './Skill'
 import './Skillbar.css'
-import Images from './images/Images.js'
+import Images from '../images/Images.js'
 function SkillCardList(props) {
     const listIcons = Images.map((image,index) =>(
         <li className="SkillContainer" key={index}>

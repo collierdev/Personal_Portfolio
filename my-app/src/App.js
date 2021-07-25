@@ -1,11 +1,10 @@
-import logo from './logo.svg';
-import Hero from './components/Hero'
-import About from './components/About'
-import Work from './components/Work'
-import Contact from './components/Contact'
-import Navbar from './components/Navbar';
-import Socials from "./components/Socials"
-import Topography from "./components/Topography"
+import Hero from './components/Hero/Hero'
+import About from './components/About/About'
+import Work from './components/Work/Work'
+import Contact from './components/Contact/Contact'
+import Navbar from './components/Navbar/Navbar';
+import Socials from "./components/Socials/Socials"
+import Topography from "./components/Topography/Topography"
 import './App.css';
 import React, {useState, useCallback, useRef,useEffect} from 'react'
 import gsap from 'gsap'

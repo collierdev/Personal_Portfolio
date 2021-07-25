@@ -1,5 +1,5 @@
 import './Hero.css';
-import Button from "./Button"
+import Button from "../Button/Button"
 
 function Hero(props) {
     return (

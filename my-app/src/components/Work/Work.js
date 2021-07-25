@@ -1,10 +1,10 @@
 import './Work.css';
 import Tilt from 'react-parallax-tilt'
-import Button from './Button'
-import Code from '../Code.JPG'
-import Nextclade from '../Nextclade.JPG'
-import T1D from '../T1D.jpg'
-import Covidfem from '../fem-covid.jpg'
+import Button from '../Button/Button'
+import Code from '../images/Code.JPG'
+import Nextclade from '../images/Nextclade.JPG'
+import T1D from '../images/T1D.jpg'
+import Covidfem from '../images/fem-covid.jpg'
   function Work(props) {
     return (
       <>
