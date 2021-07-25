@@ -1,0 +1,9 @@
+.svg-container{
+    position: fixed;
+    top:-150vh;
+    left:-130vw;
+    height: 550vh;
+    width: 300vw;
+    background-color: #17213D;
+    overflow: hidden;
+}

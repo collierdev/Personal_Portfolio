@@ -1,0 +1,26 @@
+
+.socials{
+    display: flex;
+    right:0;
+}
+
+.social-list{
+    position: absolute;
+    top:19em;
+    right:0;
+    margin-right:10%;
+    list-style: none;
+    z-index:99999999;
+}
+#github{
+    opacity: 0.6;
+}
+#linkdin{
+    opacity:0.6;
+}
+#twitter{
+    opacity: 0.6;
+}
+#youtube{
+    opacity: 0.6;
+}

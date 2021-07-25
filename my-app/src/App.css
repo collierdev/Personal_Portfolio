@@ -1,0 +1,14 @@
+.App {
+  width: 100%;
+  overflow: hidden;
+}
+.parallax-effect{
+  z-index: 39999999;
+  
+}
+.inner-elements {
+  transform: translateZ(10em);
+}
+p{
+  margin:0;
+}
