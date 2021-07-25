@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@react-hook/mouse-position": "^4.1.0",
+    "d3": "^7.0.0"
+  }
+}
