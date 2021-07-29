@@ -3,7 +3,7 @@ import About from './components/About/About'
 import Work from './components/Work/Work'
 import Contact from './components/Contact/Contact'
 import Navbar from './components/Navbar/Navbar';
-import Socials from "./components/Socials/Socials"
+import * as THREE from "three";
 import Topography from "./components/Topography/Topography"
 import './App.css';
 import React, {useState, useCallback, useRef,useEffect} from 'react'
@@ -11,14 +11,13 @@ import gsap from 'gsap'
 import Tilt from 'react-parallax-tilt'
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  let [menuState, setMenuState] = useState(false);
   useEffect(() =>{
   },[])
 
   return (
     <div className="App">
-      <Navbar state={{ isMenuOpen: [isMenuOpen, setIsMenuOpen] }}/>
+      <Navbar menuState={menuState} setMenuState={setMenuState} />
         <div>
         <Tilt className="parallax-effect" 
               tiltReverse={true}
@@ -40,7 +39,7 @@ function App() {
                 </div>
                 
             </Tilt>
-            <Socials></Socials>
+            
                   <Hero></Hero>
                   <About></About>
       </div>

@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import './fonts/Montserrat/Montserrat-Regular.ttf';
+import './fonts/Raleway/Raleway-VariableFont_wght.ttf';
 ReactDOM.render(
   <React.StrictMode>
     <App />

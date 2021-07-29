@@ -7,7 +7,7 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;  
-    align-content: flex-start;
+    justify-content: center;
     row-gap: 2vw;
     column-gap: 2vw;
     list-style: none;
@@ -16,8 +16,7 @@
     width: 100%;
 }
 .SkillContainer{
-    width: max(400px,24vw);
-    min-width: 300px;
+    width: max(200px,10vw);
     height: auto;
     display: flex;
     backdrop-filter: blur(12px) saturate(200%);
@@ -35,8 +34,8 @@
     
 }
 .SkillIcon{
-   margin:2em auto;
-   width: 12vw;
+   margin:1em auto;
+   width: 7.5vw;
     
 }
 .SkillIcon svg path{

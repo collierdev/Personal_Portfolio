@@ -14,19 +14,36 @@
     margin-bottom: 15vw;
 }
 .header {
-    color:white;
-    filter: drop-shadow(30px 10px 4px rgba(23, 18, 32,0.5));
-    font-size: 7vw;
-    font-family: 'Montserrat';
-    font-style: italic;
+    color: white;
+    font-family: 'MontserratRegular';
     position: relative;
+    font-weight: 300;
+    font-size: max(10vw,3em);
+    margin-bottom: 0.2em;
 
 }
 .about p{
-    font-family: 'Montserrat';
     color: white;
+    font-family: RalewayVariable;
     position: relative;
     height: auto;
-    font-size: 1.5vw;
+    font-size: max(2vw,1em);
+    font-weight: 300;
+    font-style: italic;
     width: 100%;
+}
+#container{
+    width: max(5em, 20vw);
+    height:auto;
+}
+.about-content{
+    display: grid;
+    grid-template-areas: 'left right';
+    grid-column: 60% 40%;
+}
+.about-article{
+    grid-area: left;
+}
+.about-3d{
+    grid-area:right;
 }

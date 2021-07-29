@@ -10,7 +10,7 @@ import Covidfem from '../images/fem-covid.jpg'
       <>
         <div className='work'>
           
-          <p className="work-header">Latest Work</p>
+          <p className="work-header">LATEST WORK</p>
           
           <div className="web-portfolio">
               <Tilt className="parallax-effect portfolio-card" 
@@ -33,7 +33,7 @@ import Covidfem from '../images/fem-covid.jpg'
                <div>
                 <h1>Personal Portfolio</h1>
                 <h2> React - GSAP - Express</h2>
-                <Button arrowWidth="80" direction="left">Visit Project</Button>
+                <Button direction="left">Visit Project</Button>
                 </div>
               </div>
               </Tilt>
@@ -55,7 +55,7 @@ import Covidfem from '../images/fem-covid.jpg'
               <div className="inner-elements">
                 <h1>COVID-19 Variant Analysis</h1>
                 <h2>Bash - GATK - BWA - NextClade - Pangolin</h2>
-                <Button arrowWidth="80" direction="left">Visit Project</Button>
+                <Button direction="left">Visit Project</Button>
               </div>
               </Tilt>
               <Tilt className="parallax-effect portfolio-card" 
@@ -76,7 +76,7 @@ import Covidfem from '../images/fem-covid.jpg'
               <div className="inner-elements">
                 <h1>Type 1 Diabietes <br></br>Three Country Cohort Analysis </h1>
                 <h2> R - Kraken - Bracken - Krona - Phyloseq - AmpVis</h2>
-                <Button arrowWidth="80" direction="left">Visit Project</Button>
+                <Button direction="left">Visit Project</Button>
               </div>
               </Tilt>
               <Tilt className="parallax-effect portfolio-card" 
@@ -97,7 +97,7 @@ import Covidfem from '../images/fem-covid.jpg'
               <div className="inner-elements">
                 <h1>COVID-19 Female Differnetial Analysis </h1>
                 <h2> R - DESeq - STAR Alignment - Gprofiler - EnrichR</h2>
-              <Button arrowWidth="80" direction="left">Visit Project</Button>
+              <Button direction="left">Visit Project</Button>
               </div>
               </Tilt>
           </div>

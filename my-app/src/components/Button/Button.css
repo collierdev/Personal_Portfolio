@@ -1,14 +1,24 @@
 .right{
     transform: scale(1,1);
-    left:95%;
+    right:0.5em;
     z-index: 5;
+    padding-left:8px;
 }
 .left{
     transform: scale(-1,1);
     z-index: 5;
-    left:-3.6vw;
+    left:0.5em
 }
 .arrow{
-    position: absolute;
-    top:40%
+    position: relative;
+    width: max(4vw,2.5em);
+    
+}
+.button-container{
+    display: flex;
+    width: auto;
+}
+
+.content{
+    font-size: max(1em,1.2vw);
 }

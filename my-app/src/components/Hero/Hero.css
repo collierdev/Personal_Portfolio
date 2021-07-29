@@ -1,8 +1,9 @@
 
-.hero{
+.hero-container{
     height: 100vh;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-areas: 'left right';
+    grid-template-columns: 90% 10%;
     justify-content: flex-start;
     font-size: calc(10px + 2vmin);
     position: relative;
@@ -11,30 +12,43 @@
     margin-right: 10%;
     
 }
+.hero-left{
+    grid-area:left;
+    display: flex;
+    flex-direction: column;
+}
+.hero-right{
+    grid-area:right;
+ 
+}
 .name{
-    font-style:normal;
     font-weight: 500;
-    font-size: 5.5rem;
+    font-size: 3.5em;
     position: relative;
-    top: 32vh;
+    width: 100%;
     margin: 0;
     color:white;
     filter: drop-shadow(30px 10px 4px rgba(23, 18, 32,0.5));
 }
 .emphasis{
+    font-family: "RalewayVariable";
     position: relative;
-    top:31vh;
     font-size: 1em;
     font-weight: 300;
     color: white; 
     font-style: italic;
 }
-.hero .button{
+.hero-content{
     position: relative;
+    top:50vh;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+.hero-content .button-container{
     margin:0;
-    top:32vh;
+    position: relative;
+    
     filter: drop-shadow(30px 10px 4px rgba(23, 18, 32,0.5));
-    height:8vh;
     font-size: max(20px,1.7vw);
     margin-top: 1em;
 }
