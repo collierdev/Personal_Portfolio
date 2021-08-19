@@ -12,6 +12,7 @@
 .social-list{
     list-style: none;
     width: 100%;
+    text-align: center;
 }
 .socialIcon{
     width:3em;
@@ -33,3 +34,12 @@ ul{
 #youtube{
     opacity: 0.6;
 }
+@media screen and (max-width: 650px) {
+    .social-list{
+        display: flex;
+        position: relative;
+        width: 100%;
+        bottom: 20vh;
+    }
+
+  }

@@ -1,26 +1,38 @@
 import './About.css';
 import Skillbar from '../Skillbar/Skillbar.js'
+import Portrait from '../images/portrait.jpg'
 
 import DNA from './DNA'
   function About(props) {
     return (
       <>
-        <div className='about'>
-            <div className='container-1'>
-                <h1 className="header">About Me</h1>
-                <div className="about-content">
-                  <div className="about-article">
-                    <p>I'm a 22 year old designer and coder living in Boston the area. <br></br> In my early years I began designing social media graphics and other branding materials, helping to form and market towards huge fanbases in the early online gaming scene.  This quickly led me down the path to web development and other coding endeavours. Since I have spent my time practicing and learning to improve my development skills.<br></br> With my time spent at the University of Vermont I've been able to gain a deeper understanding of genetics allowing me to combine these passions devloping skills in bioinformatics and data analysis.
-                    </p>
-                  </div>
-                  <DNA className="about-3d"></DNA>
+        <div className='about' id={props.id}>
+          <div className="background-text">
+            <h1 className="design">Design</h1>
+            <h1 className="develop">Develop</h1>
+            <h1 className="analyze">Analyze</h1>
+          </div>
+          <div className='container-1'>
+            <div className="about-header">
+                <h1 className="title">About Me</h1>
+              </div>  
+
+            <div className="about-content">
+              <article>
+                <p>Hi, I’m Joshua Collier a 22 year old designer and coder living in Boston, MA.</p>
+                <p>In my early years I began learning design through social media graphics and other branding materials, helping to form and market towards huge fanbases for organizations in the early Esports scene.</p>
+                <p>Design quickly turned into web development and other coding endeavours which led me to the University of Vermont to study <em>bioinformatics</em> and <em>genetics</em>.</p>
+                <p>I spend my time now creating full-stack applications with an eye for <em>interactive frontend</em>, and continuing to improve my anaylsis of readily available genomic data.</p>
+              </article>
+              <div className="portrait">
+                  <img src={Portrait} alt="Portrait"></img>
                 </div>
-                
-                <Skillbar />
             </div>
-            
+                
+            <Skillbar />
+
+          </div>
         </div>
-        
       </>
     );
   }

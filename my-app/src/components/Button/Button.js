@@ -64,20 +64,40 @@ function Button(props) {
             </div>
             
             </Button>   
-            <svg className={`${Direction} arrow`} width={arrowWidth} height={arrowHeight} viewBox="0 0 38 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <svg className={`${Direction} arrow`} width="100%" height="100%" viewBox="0 0 38 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M33.021 6L29.667 8.59L31.5 10L38 5L31.5 0L29.667 1.41L33.021 4H12V6H33.021Z M0 4H12V6H0V4Z" fill="white"/>
             </svg>
         </div>
     )
-    } else{
+    } else if (Direction =="left"){
         return (
             <div className="button-container"
             ref={element => {
                 buttonRef = element;
             }}>
-                <svg className={`${Direction} arrow`} width={arrowWidth} height={arrowHeight} viewBox="0 0 38 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg className={`${Direction} arrow`} width="100%" height="100%" viewBox="0 0 38 10" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M33.021 6L29.667 8.59L31.5 10L38 5L31.5 0L29.667 1.41L33.021 4H12V6H33.021Z M0 4H12V6H0V4Z" fill="white"/>
                 </svg>
+                <Button onMouseEnter={onHover} onMouseLeave={onLeave} className="button" onClick={toAbout}
+                >
+                    
+                <div className="content">
+                    <p>
+                    {props.children}
+                    </p>
+                    
+                </div>
+                
+                </Button>   
+                
+            </div>
+        )
+    } else {
+        return (
+            <div className="button-container"
+            ref={element => {
+                buttonRef = element;
+            }}>
                 <Button onMouseEnter={onHover} onMouseLeave={onLeave} className="button" onClick={toAbout}
                 >
                     

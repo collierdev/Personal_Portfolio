@@ -16,6 +16,7 @@ function Skill(props) {
     return (
         <div className="Skill" id={props.id}>
             <img className="SkillIcon" src={props.src} />
+            <h3>{props.id}</h3>
             <div className="SkillBar"></div>
             <SkillItemList />
         </div>

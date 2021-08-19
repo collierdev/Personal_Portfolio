@@ -1,6 +1,7 @@
 .Skillbar{
     margin-top:6vh;
     display: flex;
+    z-index: 2;
 
 }
 .Skills-container{
@@ -8,8 +9,8 @@
     flex-wrap: wrap;
     flex-direction: row;  
     justify-content: center;
-    row-gap: 2vw;
-    column-gap: 2vw;
+    row-gap: 7vw;
+    column-gap: 7vw;
     list-style: none;
     padding: 0;
     margin: 0;
@@ -19,11 +20,8 @@
     width: max(200px,10vw);
     height: auto;
     display: flex;
-    backdrop-filter: blur(12px) saturate(200%);
-    -webkit-backdrop-filter: blur(12px) saturate(200%);
-    background-color: rgba(255, 255, 255, 0.23);
-    border-radius: 12px;
-    border: 1px solid rgba(209, 213, 219, 0.3);
+    background: linear-gradient(167.4deg, rgba(255, 89, 36, 0.15) -17.07%, rgba(244, 218, 149, 0.15) 93.52%), #FFFFFF;
+    box-shadow: -1px 0px 20px 2px rgba(0, 0, 0, 0.25);
 }
 .Skill{
     position: relative;
@@ -33,17 +31,35 @@
     padding: 2vh 0;
     
 }
+.Skill h3{
+    font-family: 'MontserratBold';
+    text-align: center;
+    color:#141A33;
+    margin-bottom: 0.3em;
+}
+.SkillBar{
+    background-color: #141A33;
+    align-self: center;
+    width: 60%;
+    height: 0.15em;
+    margin-bottom: 1em;
+}
 .SkillIcon{
    margin:1em auto;
-   width: 7.5vw;
+   width: 7.5em;
     
 }
 .SkillIcon svg path{
-    fill: white;
+    fill: #141A33;
 }
 .Skill-Item-container{
     list-style: none;
     text-align: center;
     padding:0;
     margin:0;
+}
+.SkillList{
+    font-family: 'PTSerif-Italic';
+    line-height: 1.45em;
+    color: #141A33;
 }

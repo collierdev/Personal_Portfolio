@@ -4,6 +4,11 @@
     max-width:100vw;
     position: relative;
     display: flex;
+    background-color: #EFEEF4;
+}
+.background-text{
+    position: absolute;
+    left:0em;
 }
 .container-1{
     display: flex;
@@ -13,37 +18,64 @@
     max-width: 100%;
     margin-bottom: 15vw;
 }
-.header {
-    color: white;
-    font-family: 'MontserratRegular';
-    position: relative;
-    font-weight: 300;
-    font-size: max(10vw,3em);
-    margin-bottom: 0.2em;
-
+.about-header{
+    margin-bottom: 4em;
 }
-.about p{
-    color: white;
-    font-family: RalewayVariable;
-    position: relative;
-    height: auto;
-    font-size: max(2vw,1em);
-    font-weight: 300;
-    font-style: italic;
-    width: 100%;
-}
-#container{
-    width: max(5em, 20vw);
-    height:auto;
+.about-header .title{
+ font-size: 3.5em;
 }
 .about-content{
     display: grid;
     grid-template-areas: 'left right';
-    grid-column: 60% 40%;
+    grid-template-columns: 50% 50%;
 }
-.about-article{
+article{
     grid-area: left;
 }
-.about-3d{
-    grid-area:right;
+article p{
+    color: #4A4A4A;
+    font-family: 'PTSerif-Italic';
+    position: relative;
+    height: auto;
+    font-size: 1.1em;
+    font-weight: 100;
+    font-style: italic;
+    width: 100%;
+    margin-bottom: 0.5em;
+}
+.portrait{
+    grid-area: right;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    
+}
+.portrait img{
+    object-fit: cover;
+    width: 16em;
+    height: 16em;
+    margin-left: 2em;
+    box-shadow: 6px 12px 12px rgba(0, 0, 0, 0.5);
+}
+em{
+    font-family: 'PTSerif-BoldItalic';
+    font-weight: 700;
+}
+.background-text h1{
+    font-family: 'MontserratBold';
+    width: 100vw;
+    font-size: 20vw;
+    color: rgba(20, 26, 51, 0.03);
+    position: relative;
+    
+}
+.design{
+    left:-0.1em;
+}
+.develop{
+    text-align: right;
+    top:-0.25em;
+}
+.analyze{
+    top:-0.5em;
 }

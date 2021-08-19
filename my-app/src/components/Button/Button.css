@@ -11,7 +11,8 @@
 }
 .arrow{
     position: relative;
-    width: max(4vw,2.5em);
+    width: 2.5em;
+    align-self: center;
     
 }
 .button-container{
@@ -20,5 +21,5 @@
 }
 
 .content{
-    font-size: max(1em,1.2vw);
+    font-size: max(1.7vw,1.5em);
 }

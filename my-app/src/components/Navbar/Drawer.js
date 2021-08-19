@@ -1,7 +1,9 @@
 import React,{useRef,useEffect} from 'react'
 import { Link } from 'wouter';
 import gsap from 'gsap';
+import Navlink from './Navlink'
 import './Drawer.css'
+import Navbar from './Navbar';
 
 function Drawer(props) {
     let drawerMenu = useRef(null);
@@ -17,7 +19,7 @@ function Drawer(props) {
         [drawerMenuOverlay, drawerMenuLayer, drawerMenu],
         {
           duration: 0,
-          x: '100%'
+          x: '100%',
         },
         {
           duration: 0.75,
@@ -47,38 +49,45 @@ function Drawer(props) {
             <div className="menu-layer" ref={el => (drawerMenuLayer = el)}></div>
             <nav className="drawerNavigation" ref={el => (drawerMenu = el)}>
             <ul className="drawer-list">
-                <li className='drawer-item'>
-                <Link 
+                <li className='drawer-item'
+                >
+                <Navlink 
                     to='/about' 
+                    target="#section-2"
                     className='drawer-links'
                 >
                     About
-                </Link>
+                </Navlink>
                 </li>
                 <li className='drawer-item'>
-                <Link
+                <Navlink
                     to='/work'
+                    target="#section-1"
                     className='drawer-links'
+                    onClick={() => setMenuState(false)}
                 >
                     Work
-                </Link>
+                </Navlink>
                 </li>
                 <li className='drawer-item'>
-                <Link
+                <Navlink
                     to='/experiments'
                     className='drawer-links'
+                    onClick={() => setMenuState(false)}
                 >
                     Experiments
-                </Link>
+                </Navlink>
                 </li>
     
                 <li className='drawer-item'>
-                <Link
+                <Navlink
                     to='/contact'
+                    target="#section-3"
                     className='drawer-links'
+                    onClick={() => setMenuState(false)}
                 >
                     Contact
-                </Link>
+                </Navlink>
                 </li>
             </ul>
             </nav>

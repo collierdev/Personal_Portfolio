@@ -1,9 +1,22 @@
-.svg-container{
+.parallax-effect{
     position: fixed;
-    top:-150vh;
-    left:-130vw;
-    height: 550vh;
+    left:0;
+    top:0;
+} 
+.svg-container{
+    position: relative;
+    height: 200vh;
     width: 300vw;
-    background-color: #1c326d;
+    left:-25vw;
+    top:-25vw;
+    z-index: -9999999;
     overflow: hidden;
+    
 }
+@media screen and (max-width: 650px) {
+    .svg-container{
+        width: 500vw;
+        height: 500vh;
+    }
+
+  }

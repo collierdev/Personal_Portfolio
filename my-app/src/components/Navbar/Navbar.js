@@ -1,9 +1,12 @@
   
 import React, { useState,} from 'react';
-import { Link } from 'wouter';
+import { gsap } from "gsap/dist/gsap";
+import {Link} from 'wouter'
 import './Navbar.css';
-import Header from './Header'
-import Drawer from './Drawer'
+import Header from './Header';
+import Drawer from './Drawer';
+import Navlink from './Navlink'
+
 const viewportContext = React.createContext({});
 
 const ViewportProvider = ({ children }) => {
@@ -53,39 +56,30 @@ function DesktopNav(props) {
 return(
 <nav className='navbar'>  
   <div className='navbar-container'>
-    <Link to='/' className='navbar-logo'>
+    <Navlink  to='/'  target="#section-0" class="logo">
       COLLIER DEV
-    </Link>
+    </Navlink>
     <ul className={'nav-menu'}>
       <li className='nav-item'>
-        <Link to='/about' className='nav-links'>
+        <Navlink to='/about' target="#section-2" class="nav-links">
           About
-        </Link>
+        </Navlink>
       </li>
       <li className='nav-item'>
-        <Link
-          to='/work'
-          className='nav-links'
-        >
+        <Navlink target="#section-1" to='/work' class="nav-links">
           Work
-        </Link>
+        </Navlink>
       </li>
       <li className='nav-item'>
-        <Link
-          to='/experiments'
-          className='nav-links'
-        >
+        <Link to='/experiments' className='nav-links' class="nav-links">
           Experiments
         </Link>
       </li>
 
       <li className='nav-item'>
-        <Link
-          to='/contact'
-          className='nav-links'
-        >
+        <Navlink target="#section-3" to='/contact' class="nav-links">
           Contact
-        </Link>
+        </Navlink>
       </li>
     </ul>
   </div>
