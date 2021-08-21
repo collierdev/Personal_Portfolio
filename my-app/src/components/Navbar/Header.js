@@ -12,7 +12,7 @@ function Header(props) {
     return(
     <nav className='navbar'>    
       <div className='navbar-container'>
-        <Navlink  to='/'  target="#section-0" class="logo">
+        <Navlink menuState={menuState} setMenuState={setMenuState}  to='/'  target="#section-0" class="logo">
           COLLIER DEV
         </Navlink>
         <div className='burger'>
