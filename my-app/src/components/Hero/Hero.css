@@ -10,6 +10,7 @@
     background-color: #000000;
     background-image: linear-gradient(147deg, #04139f 25%, #000000 100%);
     overflow: hidden;
+    position: relative;
 
 }
 .hero-left{
