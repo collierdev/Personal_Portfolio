@@ -1,5 +1,6 @@
 import React from 'react'
 import gsap from "gsap"
+import './Drawer.css'
 import { Link } from 'wouter';
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin);
