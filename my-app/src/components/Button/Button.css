@@ -1,6 +1,6 @@
 .right{
     transform: scale(1,1);
-    right:1em;
+    right:1vw;
     z-index: 5;
     padding-left:8px;
 }
@@ -11,7 +11,7 @@
 }
 .arrow{
     position: relative;
-    width: 2.5em;
+    width: 1vw;
     align-self: center;
     
 }
