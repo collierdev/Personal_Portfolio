@@ -66,6 +66,7 @@
 }
 .drawer-item a:visited {
   color: rgb(208, 208, 208) ;
+  text-decoration: none;
 }
 .drawer-item a:hover {
   color: rgb(208, 208, 208) ;
