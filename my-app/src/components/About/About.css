@@ -79,3 +79,12 @@ em{
 .analyze{
     top:-0.5em;
 }
+@media screen and (max-width: 1000px) {
+    .about-content{
+        display: flex;
+        flex-direction: column;
+    }
+    .portrait{
+        margin-bottom: 3em;
+    }
+}

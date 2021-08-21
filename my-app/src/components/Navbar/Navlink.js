@@ -4,8 +4,12 @@ import { Link } from 'wouter';
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 gsap.registerPlugin(ScrollToPlugin);
 function Navlink(props) {
+  const { menuState, setMenuState } = props;
     const handleClick = (e) => {
-    
+      if(menuState){
+        setMenuState(false);
+      }
+      console.log(props);
         console.log(e)
         e.stopPropagation();
         gsap.to(window, {

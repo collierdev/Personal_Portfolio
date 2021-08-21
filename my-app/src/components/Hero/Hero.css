@@ -43,8 +43,15 @@
     position: relative;
     
     filter: drop-shadow(30px 10px 4px rgba(23, 18, 32,0.5));
-    font-size: max(20px,1.7vw);
     margin-top: 1em;
+}
+.about-button{
+    color: white;
+    text-decoration: none;
+    font-family: 'MontserratRegular';
+}
+.about-button{
+    font-size: 1em;
 }
 .social-list a{
     height: 100%;
@@ -68,5 +75,8 @@
     }
     .emphasis{
         font-size: 1.4em;
+    }
+    .about-button{
+        font-size: 1em;
     }
   }

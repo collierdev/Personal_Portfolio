@@ -35,26 +35,29 @@ function Drawer(props) {
     useEffect(() => {
       menuState ? drawerMenuTimeline.current.play() : drawerMenuTimeline.current.reverse();
     }, [menuState]);
-    
+    function handleClick(){
+      setMenuState(!menuState);
+      console.log(props);
+  }
 
     return(
         <>
         <div
         className="drawerNavigationOverlay"
         ref={el => (drawerMenuOverlay = el)}
-        onClick={() => setMenuState(false)}
         >
         </div>
         <div className="drawer">
             <div className="menu-layer" ref={el => (drawerMenuLayer = el)}></div>
             <nav className="drawerNavigation" ref={el => (drawerMenu = el)}>
             <ul className="drawer-list">
-                <li className='drawer-item'
+                <li className='drawer-item' 
                 >
                 <Navlink 
                     to='/about' 
                     target="#section-2"
                     className='drawer-links'
+                    menuState={menuState} setMenuState={setMenuState}
                 >
                     About
                 </Navlink>
@@ -64,7 +67,7 @@ function Drawer(props) {
                     to='/work'
                     target="#section-1"
                     className='drawer-links'
-                    onClick={() => setMenuState(false)}
+                    menuState={menuState} setMenuState={setMenuState}
                 >
                     Work
                 </Navlink>
@@ -73,7 +76,7 @@ function Drawer(props) {
                 <Navlink
                     to='/experiments'
                     className='drawer-links'
-                    onClick={() => setMenuState(false)}
+                    menuState={menuState} setMenuState={setMenuState}
                 >
                     Experiments
                 </Navlink>
@@ -84,7 +87,7 @@ function Drawer(props) {
                     to='/contact'
                     target="#section-3"
                     className='drawer-links'
-                    onClick={() => setMenuState(false)}
+                    menuState={menuState} setMenuState={setMenuState}
                 >
                     Contact
                 </Navlink>

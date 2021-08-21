@@ -20,6 +20,18 @@
     width: auto;
 }
 
-.content{
+.content p{
     font-size: max(1.7vw,1.5em);
+    font-family: 'MontserratRegular';
+}
+
+.button a{
+    color: white;
+    text-decoration: none;
+    font-family: 'MontserratRegular';
+}
+.button a::visited{
+    color: white;
+    text-decoration: none;
+    font-family: 'MontserratRegular';
 }

@@ -8,16 +8,15 @@
     display: grid;
     grid-template-areas: 'left right';
     grid-template-columns: 45% 55%;
-    width: 70%;
-    margin: auto;
+    max-width: 70%;
+    margin: auto auto;
     position: relative;
     top:50%;
-    -ms-transform: translateY(-50%);
+    height: 35em;
     transform: translateY(-50%);
 
     
-    background: linear-gradient(246.3deg, #081E9E -15.58%, #081355 59.97%);
-    box-shadow: 0 11px 2px rgba(0,0,0,0.07), 
+ box-shadow: 0 11px 2px rgba(0,0,0,0.07), 
                 0 12px 4px rgba(0,0,0,0.07), 
                 0 14px 8px rgba(0,0,0,0.07), 
                 0 18px 16px rgba(0,0,0,0.07),
@@ -26,9 +25,18 @@
 }
 .contact-right{
     grid-area:right;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     text-align: center;
     font-size: 2em;
     padding: 1em 1em;
+    background: linear-gradient(246.3deg, #081E9E -15.58%, #081355 59.97%);
+   
+}
+form{
+    display: flex;
+    flex-direction: column;
 }
 form div{
     display: flex;
@@ -70,7 +78,9 @@ textarea{
     flex-direction: column;
     background: #EFEEF4;
     color:white;
+    max-width: 100%;
     padding: 1em 1em;
+    
 }
 .contact-title{
     font-family: 'MontserratBold';
@@ -91,13 +101,15 @@ textarea{
 .contact-page .social-list{
     position: static;
     display: flex;
+    justify-content: center;
 }
 .contact-page .socialIcon{
-    width:4em;
+    max-width:4em;
 }
 button{
     color:white;
         font-weight:500;
+        width: fit-content;
         padding: 2vh 2vw;
         margin:0;
         border:none;
@@ -106,7 +118,6 @@ button{
         background: -webkit-linear-gradient(to left, #f7b733, #fc4a1a);  
         background: linear-gradient(to left, #f7b733, #fc4a1a);
         display:flex;
-        margin-top: 1em;
         font-family: 'RalewayVariable';
         font-weight: 600;
         font-size: 0.55em;
@@ -117,3 +128,30 @@ button{
     opacity: 0.25; /* Firefox */
   }
 
+  @media screen and (max-width: 1000px) {
+    .contact-container{
+        grid-template-areas: 
+            "left"
+            "right";
+        height: 84%;
+        grid-template-rows: 49% 51%;
+        grid-template-columns: none;
+    }
+    .contact-right{padding: 3vh 2vw}
+    .contact-title{font-size: 2.25em;}
+    .contact-content{font-size: 1em; font-weight: 600;}
+    .contact-page .social-list ul{
+        width:15%
+    }
+    .contact-page .socialIcon{
+        width:8vw;
+    }
+    label{font-size: 0.5em;}
+    input{font-size: 0.5em;}
+    textarea{font-size: 0.35em;height: 5em;}
+    button{
+        height: auto;
+        font-size: 0.4em;
+        margin-bottom: 1em;
+    }
+  }
