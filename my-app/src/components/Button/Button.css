@@ -1,13 +1,12 @@
 .right{
     transform: scale(1,1);
     right:0.5vw;
-    z-index: 2;
-    padding-left:8px;
+    z-index: 3;
 }
 .left{
     transform: scale(-1,1);
-    z-index: 2;
-    left:1vw;
+    z-index: 3;
+    left:0.5vw;
 }
 .arrow{
     position: relative;
