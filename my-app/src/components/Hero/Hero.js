@@ -9,6 +9,7 @@ function Hero(props) {
       <>
         
         <div className='hero-container' id={props.id}>
+          <div className="topo-container">
         <Tilt className="parallax-effect" 
             tiltReverse={true}
             perspective={1700}
@@ -24,7 +25,9 @@ function Hero(props) {
           <div className="inner-elements">
             <Topography></Topography>
           </div>    
+          
       </Tilt>
+      </div>
           <div className="hero-left" >
             <div className="hero-content">
               <h1 className="name">Joshua Collier</h1>
