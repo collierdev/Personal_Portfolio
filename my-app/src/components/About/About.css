@@ -87,4 +87,7 @@ em{
     .portrait{
         margin-bottom: 3em;
     }
+    .portrait img{
+        margin-left: 0;
+    }
 }
