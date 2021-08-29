@@ -1,10 +1,12 @@
 .about{
+    justify-content: center;
     padding-right: 10%;
     padding-left: 10%;
     max-width:100vw;
     position: relative;
     display: flex;
     background-color: #EFEEF4;
+    min-height: 100vh;
 }
 .background-text{
     position: absolute;
@@ -16,13 +18,13 @@
     justify-content: flex-start;
     margin:0 0;
     max-width: 100%;
-    margin-bottom: 15vw;
+    margin-bottom: 3em;
 }
 .about-header{
-    margin-bottom: 4em;
+    margin-bottom: 2em;
 }
 .about-header .title{
- font-size: 3.5em;
+ font-size: 2.5em;
 }
 .about-content{
     display: grid;
@@ -37,11 +39,11 @@ article p{
     font-family: 'PTSerif-Italic';
     position: relative;
     height: auto;
-    font-size: 1.1em;
+    font-size: 0.75em;
     font-weight: 100;
     font-style: italic;
     width: 100%;
-    margin-bottom: 0.5em;
+    margin-bottom: 0.25em;
 }
 .portrait{
     grid-area: right;
@@ -52,8 +54,8 @@ article p{
 }
 .portrait img{
     object-fit: cover;
-    width: 16em;
-    height: 16em;
+    width: 10em;
+    height: 10em;
     margin-left: 2em;
     box-shadow: 6px 12px 12px rgba(0, 0, 0, 0.5);
 }

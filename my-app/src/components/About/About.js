@@ -2,7 +2,6 @@ import './About.css';
 import Skillbar from '../Skillbar/Skillbar.js'
 import Portrait from '../images/portrait.jpg'
 
-import DNA from './DNA'
   function About(props) {
     return (
       <>

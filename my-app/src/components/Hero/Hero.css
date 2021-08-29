@@ -5,7 +5,6 @@
     grid-template-areas: 'left right';
     grid-template-columns: 90% 10%;
     justify-content: flex-start;
-    font-size: calc(10px + 2vmin);
     padding: 0 10%;
     background-color: #000000;
     background-image: linear-gradient(147deg, #04139f 25%, #000000 100%);
@@ -26,7 +25,7 @@
 }
 .name{
     font-weight: 500;
-    font-size: 3.5em;
+    font-size: 3em;
     position: relative;
     width: 100%;
     margin: 0;
@@ -47,14 +46,6 @@
     
     filter: drop-shadow(30px 10px 4px rgba(23, 18, 32,0.5));
     margin-top: 1em;
-}
-.about-button{
-    color: white;
-    text-decoration: none;
-    font-family: 'MontserratRegular';
-}
-.about-button{
-    font-size: 1em;
 }
 .social-list a{
     height: 100%;
@@ -81,12 +72,9 @@
         transform: translateY(5em);
     }
     .name{
-        font-size: 4em;
+        font-size: 3em;
     }
     .emphasis{
         font-size: 1.4em;
-    }
-    .about-button{
-        font-size: 1em;
     }
   }

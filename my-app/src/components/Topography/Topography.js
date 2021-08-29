@@ -1,21 +1,14 @@
 import React from 'react'
-import gsap from 'gsap'
-import useMouse from "@react-hook/mouse-position";
 import './Topography.css'
 function Topography(props) {
     const target = React.useRef(null);
-    const mouse = useMouse(target, {
-        fps: Infinity,
-        enterDelay: 100,
-        leaveDelay: 100
-      });
     return (
          <div className='svg-container' ref={target}>
             <svg viewBox="0 0 1900 1900" className="Topo" xmlns="http://www.w3.org/2000/svg" id="topo">
                 <defs>
                     <linearGradient x1='0%' y1='0%' x2='0%' y2='100%' id='bgGradient'>
-                        <stop offset='0%' stop-color='#3023AE' stop-opacity='1' />
-                        <stop offset='83%' stop-color='#53A0FD' stop-opacity='0' />
+                        <stop offset='0%' stopColor='#3023AE' stopOpacity='1' />
+                        <stop offset='83%' stopColor='#53A0FD' stopOpacity='0' />
                     </linearGradient>
                 </defs>
                 <path 

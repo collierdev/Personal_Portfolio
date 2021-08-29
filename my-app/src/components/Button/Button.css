@@ -10,7 +10,7 @@
 }
 .arrow{
     position: relative;
-    width: 2.5em;
+    width: 2em;
     align-self: center;
     
 }
@@ -18,19 +18,41 @@
     display: flex;
     width: auto;
 }
-
-.content p{
-    font-size: max(1.7vw,1.5em);
-    font-family: 'MontserratRegular';
+.button{
+        color: white;
+        font-weight: 500;
+        width: -moz-fit-content;
+        width: fit-content;
+        font-size: 0.75em;
+        padding: 1em 1em;
+        margin: 0;
+        border: none;
+        cursor: pointer;
+        background: #fc4a1a;
+        background: linear-gradient(to left, #f7b733, #fc4a1a);
+        display: flex;
+        font-family: 'RalewayVariable';
 }
-
 .button a{
-    color: white;
     text-decoration: none;
-    font-family: 'MontserratRegular';
+    color: white;
 }
 .button a::visited{
     color: white;
     text-decoration: none;
     font-family: 'MontserratRegular';
+}
+.button{
+    color:white;
+        font-weight:500;
+        padding: 1em 1em;
+        margin:0;
+        width: fit-content;
+        border:none;
+        cursor: pointer;
+        background: #fc4a1a;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #f7b733, #fc4a1a);  
+        background: linear-gradient(to left, #f7b733, #fc4a1a); 
+        z-index:2;
+        display:flex;
 }

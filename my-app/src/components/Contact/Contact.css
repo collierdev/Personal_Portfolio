@@ -1,19 +1,19 @@
 .contact-page{
     width:100%;
-    height:100vh;
+    min-height:100vh;
     position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
     background: linear-gradient(90deg, #F0441F 0%, #F0B136 100%);
 }
 .contact-container{
     display: grid;
     grid-template-areas: 'left right';
     grid-template-columns: 45% 55%;
-    max-width: 70%;
-    margin: auto auto;
-    position: relative;
-    top:50%;
-    height: 35em;
-    transform: translateY(-50%);
+    width: max(65%,30em);
+    margin: 0 auto;
+    height: 25em;
 
     
  box-shadow: 0 11px 2px rgba(0,0,0,0.07), 
@@ -25,51 +25,62 @@
 }
 .contact-right{
     grid-area:right;
-    display: flex;
     flex-direction: column;
-    justify-content: center;
-    text-align: center;
-    font-size: 2em;
-    padding: 1em 1em;
+    flex-shrink: 1;
+    padding: 1.25em 1em;
     background: linear-gradient(246.3deg, #081E9E -15.58%, #081355 59.97%);
-   
 }
 form{
     display: flex;
+    height: 100%;
+    justify-content: space-between;
     flex-direction: column;
 }
 form div{
     display: flex;
     flex-direction: column;
+    margin-bottom: 0.1em;
 }
 label{
     text-align: left;
     color: #FFFFFF;
     font-family: 'RalewayVariable';
-    font-size: 0.5em;
+    font-size: 0.75em;
     font-weight: 700;
-    margin-bottom: 0.4em;
 }
 input,textarea{
     background-color: transparent;
     border: none;
     color: #FFFFFF;
-    border-bottom: 0.1em solid white;
-    margin-bottom: 1.2em;
+    border-bottom: 0.125em solid white;
+    margin-bottom: 0.5em;
     outline: none;
 }
 input{
     font-family: 'MontserratRegular';
+    font-size: 1.5vw;
     font-weight: 500;
-    font-size: 0.5em;
     height: 2em;
 }
 textarea{
     resize: none;
-    height:10em;
+    height:8em;
     font-family: 'MontserratRegular';
     font-weight: 500;
-    font-size: 0.5em;
+    font-size: 1.5vw;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: white;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
 }
 
 .contact-left{
@@ -79,20 +90,51 @@ textarea{
     background: #EFEEF4;
     color:white;
     max-width: 100%;
-    padding: 1em 1em;
-    
+    padding: 0.5em 1em;   
+}
+.contact-left a{
+    text-decoration: none;
+    margin-bottom: 1EM;
+    flex-grow: 1;
+}
+.resume-button{
+    word-wrap:normal;
+    color:white;
+        font-weight:500;
+        font-size: 0.75em;
+        padding: 1em 1em;
+        margin:0;
+        border:none;
+        cursor: pointer;
+        background: #fc4a1a;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #f7b733, #fc4a1a);  
+        background: linear-gradient(to left, #f7b733, #fc4a1a);
+        display:flex;
+        font-family: 'RalewayVariable';
+        
 }
 .contact-title{
     font-family: 'MontserratBold';
     color:#4A4A4A;
-    font-size: 3em;
+    font-size: 2em;
     margin-bottom: 0.5em;
 }
 .contact-content{
     font-family: 'RalewayVariable';
     color:#4A4A4A;
-    font-size: 1.5em;
-    flex-grow: 1;
+    font-size: 0.85em;
+}
+.first{
+    margin-bottom: 0.5em;
+}
+.second{
+    margin-bottom: 1.5em;
+}
+.third{
+    margin-bottom: 0.5em;
+}
+.fourth{
+    margin-bottom: 0.5em;
 }
 .contact-page .socials{
     position: static;
@@ -104,13 +146,14 @@ textarea{
     justify-content: center;
 }
 .contact-page .socialIcon{
-    max-width:4em;
+    max-width:2.5em;
 }
-button{
+.form-button{
     color:white;
         font-weight:500;
         width: fit-content;
-        padding: 2vh 2vw;
+        font-size:0.75em;
+        padding: 1em 1em;
         margin:0;
         border:none;
         cursor: pointer;
@@ -119,8 +162,6 @@ button{
         background: linear-gradient(to left, #f7b733, #fc4a1a);
         display:flex;
         font-family: 'RalewayVariable';
-        font-weight: 600;
-        font-size: 0.55em;
 }
 ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: white;
@@ -128,30 +169,34 @@ button{
     opacity: 0.25; /* Firefox */
   }
 
+  @media screen and (max-width: 1200px) {
+    label{font-size: 2vw;}
+    input{font-size: 0.95em;}
+    textarea{font-size: 0.95em;height: 3em;}
+  }  
   @media screen and (max-width: 1000px) {
     .contact-container{
-        grid-template-areas: 
-            "left"
-            "right";
-        height: 84%;
-        grid-template-rows: 49% 51%;
+        height: 80vh;
+        display: flex;
+        flex-direction: column;
+        max-width: 70%;
         grid-template-columns: none;
     }
-    .contact-right{padding: 3vh 2vw}
-    .contact-title{font-size: 2.25em;}
-    .contact-content{font-size: 1em; font-weight: 600;}
+    .contact-title{font-size: 1.5em;}
+    .contact-content{font-size: 0.75em; font-weight: 600;}
     .contact-page .social-list ul{
-        width:15%
+        width:15%;
     }
     .contact-page .socialIcon{
-        width:8vw;
+        width:7vw;
     }
-    label{font-size: 0.5em;}
-    input{font-size: 0.5em;}
-    textarea{font-size: 0.35em;height: 5em;}
-    button{
-        height: auto;
-        font-size: 0.4em;
-        margin-bottom: 1em;
+    label{font-size: 0.55em; margin-bottom: 0.5em;}
+    input{font-size: 0.45em;}
+    textarea{font-size: 0.75em;height: 3em;}
+    .contact-left{
+        min-height: 50%;
     }
-  }
+    .contact-right{
+        flex-grow: 1;
+    }
+  }  

@@ -1,5 +1,6 @@
 body {
   font-family: "MontserratRegular";
+  font-size: calc(10px + 2vmin);
   margin: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -3,18 +3,18 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    height: 5em;
+    height: auto;
     width: 80%;
     position: fixed;
     top: 0;
     z-index: 999;
-    margin: 0% 10%;
+    margin: 1em 10%;
+    
   }
   
   .logo {
     color: #FFAB47;
     font-family: 'MontserratBold';
-    font-size: 1.25em;
     font-weight: 600;
     display: flex;
     align-items: center;
@@ -54,7 +54,7 @@
   }
   .nav-links {
     color: #FFAB47;
-    font-size: 1em;
+    font-size: 0.75em;
     font-family: 'MontserratRegular';
     display: flex;
     align-items: center;

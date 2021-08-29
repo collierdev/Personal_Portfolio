@@ -1,16 +1,14 @@
 import React,{useRef,useEffect} from 'react'
-import { Link } from 'wouter';
 import gsap from 'gsap';
 import Navlink from './Navlink'
 import './Drawer.css'
-import Navbar from './Navbar';
 
 function Drawer(props) {
+  
     let drawerMenu = useRef(null);
     let drawerMenuOverlay = useRef(null);
     let drawerMenuLayer = useRef(null);
     const drawerMenuTimeline = useRef();
-    console.log(props);
     const { menuState, setMenuState } = props;
   
     useEffect(() => {
@@ -35,11 +33,8 @@ function Drawer(props) {
     useEffect(() => {
       menuState ? drawerMenuTimeline.current.play() : drawerMenuTimeline.current.reverse();
     }, [menuState]);
-    function handleClick(){
-      setMenuState(!menuState);
-      console.log(props);
-  }
 
+  
     return(
         <>
         <div
@@ -51,9 +46,9 @@ function Drawer(props) {
             <div className="menu-layer" ref={el => (drawerMenuLayer = el)}></div>
             <nav className="drawerNavigation" ref={el => (drawerMenu = el)}>
             <ul className="drawer-list">
-                <li className='drawer-item' 
-                >
+                <li className='drawer-item'>
                 <Navlink 
+                    type="mobile"
                     to='/about' 
                     target="#section-2"
                     className='drawer-links'
@@ -64,6 +59,7 @@ function Drawer(props) {
                 </li>
                 <li className='drawer-item'>
                 <Navlink
+                    type="mobile"
                     to='/work'
                     target="#section-1"
                     className='drawer-links'
@@ -71,9 +67,11 @@ function Drawer(props) {
                 >
                     Work
                 </Navlink>
+                
                 </li>
                 <li className='drawer-item'>
                 <Navlink
+                    type="mobile"
                     to='/experiments'
                     className='drawer-links'
                     menuState={menuState} setMenuState={setMenuState}
@@ -84,6 +82,7 @@ function Drawer(props) {
     
                 <li className='drawer-item'>
                 <Navlink
+                    type="mobile"
                     to='/contact'
                     target="#section-3"
                     className='drawer-links'

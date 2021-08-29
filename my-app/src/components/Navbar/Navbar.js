@@ -1,36 +1,13 @@
   
-import React, { useState,} from 'react';
-import { gsap } from "gsap/dist/gsap";
+import React, {useRef, useEffect} from 'react';
+import { gsap } from "gsap";
+import { Divide as Hamburger } from 'hamburger-react'
 import {Link} from 'wouter'
 import './Navbar.css';
-import Header from './Header';
 import Drawer from './Drawer';
 import Navlink from './Navlink'
-
-const viewportContext = React.createContext({});
-
-const ViewportProvider = ({ children }) => {
-  const [width, setWidth] = React.useState(window.innerWidth);
-  const [height, setHeight] = React.useState(window.innerHeight);
-  const handleWindowResize = () => {
-    setWidth(window.innerWidth);
-    setHeight(window.innerHeight);
-  };
-
-  React.useEffect(() => {
-    window.addEventListener("resize", handleWindowResize);
-    return () => window.removeEventListener("resize", handleWindowResize);
-  }, []);
-
-  return (
-    <viewportContext.Provider value={{ width, height }}>
-      {children}
-    </viewportContext.Provider>
-  );
-};
 const useViewport = () => {
   const [width, setWidth] = React.useState(window.innerWidth);
-
   React.useEffect(() => {
     const handleWindowResize = () => setWidth(window.innerWidth);
     window.addEventListener("resize", handleWindowResize);
@@ -40,22 +17,25 @@ const useViewport = () => {
   // Return the width so we can use it in our components
   return { width };
 }
+
+
 function DrawerNav(props){
- 
-  const { menuState, setMenuState } = props
+  const { menuState, setMenuState } = props;
   return(
     <>
-    <Header menuState={menuState} setMenuState={setMenuState} />
-    <Drawer menuState={menuState} setMenuState={setMenuState}/>
+        <Navlink menuState={menuState} setMenuState={setMenuState}  to='/'  target="#section-0" class="logo">
+          COLLIER DEV
+        </Navlink>
+        <div className='burger'>
+        <Hamburger className={`menu-trigger`} toggled={menuState} toggle={setMenuState} size="30" color="#F3742A" position="absolute"/>
+        </div>
     </>
   );
 };
 
 function DesktopNav(props) {
-
 return(
-<nav className='navbar'>  
-  <div className='navbar-container'>
+  <>
     <Navlink  to='/'  target="#section-0" class="logo">
       COLLIER DEV
     </Navlink>
@@ -82,22 +62,53 @@ return(
         </Navlink>
       </li>
     </ul>
-  </div>
-</nav>
+  </>
 );
 };
 
 function Navigation(props) {
   const { width } = useViewport();
   const breakpoint = 960;
-  return width < breakpoint ? <DrawerNav {...props}></DrawerNav> : <DesktopNav/>;
+  const navRef= useRef();
+  useEffect(() => {
+    const animation = gsap.to(navRef.current, {
+          
+      y:-120,
+      paused: true,
+      duration: 0.2,
+      
+    });
+    const animation2 = gsap.to(navRef.current, {
+      scrollTrigger: {
+        start: "top top",
+        end: 99999,
+        onUpdate: (self) => {
+          self.direction === 1 ? animation.play() : animation.reverse();
+        },
+      },
+    });
+    return () => {
+      animation.kill();
+      animation2.scrollTrigger.kill();
+    };
+  },[])
+
+  return(
+    <>
+    <nav className='navbar'>  
+      <div className='navbar-container' ref={navRef}>
+        {width < breakpoint ? <DrawerNav {...props}></DrawerNav> : <DesktopNav/>}
+      </div>
+    </nav>
+    {width < breakpoint ? <Drawer {...props}/> : ''}
+    </>
+  ) ;
 };
 
 function Navbar(props) {
+
   return (
-    <ViewportProvider>
       <Navigation {...props}/>
-    </ViewportProvider>
   );
 }
 
