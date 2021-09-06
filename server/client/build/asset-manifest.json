@@ -1,0 +1,32 @@
+{
+  "files": {
+    "main.css": "/static/css/main.66f326f8.chunk.css",
+    "main.js": "/static/js/main.0e810683.chunk.js",
+    "main.js.map": "/static/js/main.0e810683.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.44d0b4f9.js",
+    "runtime-main.js.map": "/static/js/runtime-main.44d0b4f9.js.map",
+    "static/js/2.6380e5a5.chunk.js": "/static/js/2.6380e5a5.chunk.js",
+    "static/js/2.6380e5a5.chunk.js.map": "/static/js/2.6380e5a5.chunk.js.map",
+    "static/js/3.89228c86.chunk.js": "/static/js/3.89228c86.chunk.js",
+    "static/js/3.89228c86.chunk.js.map": "/static/js/3.89228c86.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/main.66f326f8.chunk.css.map": "/static/css/main.66f326f8.chunk.css.map",
+    "static/js/2.6380e5a5.chunk.js.LICENSE.txt": "/static/js/2.6380e5a5.chunk.js.LICENSE.txt",
+    "static/media/3d-cube.27da10d3.svg": "/static/media/3d-cube.27da10d3.svg",
+    "static/media/Code.006f2e1e.JPG": "/static/media/Code.006f2e1e.JPG",
+    "static/media/index.css": "/static/media/Raleway-VariableFont_wght.3fefe681.ttf",
+    "static/media/Nextclade.0ade5f6e.JPG": "/static/media/Nextclade.0ade5f6e.JPG",
+    "static/media/T1D.075e0bcc.jpg": "/static/media/T1D.075e0bcc.jpg",
+    "static/media/analysis.e29a9c2c.svg": "/static/media/analysis.e29a9c2c.svg",
+    "static/media/download-arrow.5d60d812.svg": "/static/media/download-arrow.5d60d812.svg",
+    "static/media/fem-covid.a4155451.jpg": "/static/media/fem-covid.a4155451.jpg",
+    "static/media/internet.0d0a811e.svg": "/static/media/internet.0d0a811e.svg",
+    "static/media/portrait.1daead79.jpg": "/static/media/portrait.1daead79.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.44d0b4f9.js",
+    "static/js/2.6380e5a5.chunk.js",
+    "static/css/main.66f326f8.chunk.css",
+    "static/js/main.0e810683.chunk.js"
+  ]
+}

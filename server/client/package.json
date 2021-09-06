@@ -1,0 +1,56 @@
+{
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@hookform/resolvers": "^2.8.0",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/react": "^11.1.0",
+    "@testing-library/user-event": "^12.1.10",
+    "axios": "^0.21.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "file-saver": "^2.0.5",
+    "gsap": "^3.7.0",
+    "hamburger-react": "^2.4.1",
+    "js-util": "git://github.com/ykob/js-util.git",
+    "nodemailer": "^6.6.2",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-hook-form": "^7.12.1",
+    "react-mt-svg-lines": "^0.9.1",
+    "react-parallax-tilt": "^1.5.44",
+    "react-scripts": "4.0.3",
+    "react-three-fiber": "^6.0.13",
+    "styled-components": "^5.3.0",
+    "three": "^0.130.1",
+    "web-vitals": "^1.0.1",
+    "wouter": "^2.7.4",
+    "yup": "^0.32.9"
+  },
+  "proxy": "http://localhost:3001",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
+}

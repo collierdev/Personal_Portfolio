@@ -10,6 +10,9 @@ var usersRouter = require('./routes/users');
 var testAPIRouter = require("./routes/testAPI");
 var contactMeRouter = require("./routes/contactme");
 var resumeRouter = require("./routes/resume");
+var experimentsRouter = require('./routes/experiments');
+var kronaRouter = require('./routes/krona');
+var covidDiffRouter = require('./routes/covid-19-differential');
 var app = express();
 
 // view engine setup
@@ -22,11 +25,12 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cors());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.resolve(__dirname, 'client/build')));
 
 
 
 mongoose.connect(
-  ``, 
+  `mongodb+srv://jwcollie:CSjMSyJLMnW3WxmA@portfolio-database.rc5fp.mongodb.net/Portfolio-Database?retryWrites=true&w=majority`, 
   {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -44,6 +48,13 @@ app.use('/users', usersRouter);
 app.use("/testAPI", testAPIRouter);
 app.use("/contactme", contactMeRouter);
 app.use('/resume', resumeRouter);
+app.use('/experiments', experimentsRouter);
+app.use("/krona", kronaRouter);
+app.use("/covid-19-differential", covidDiffRouter);
+
+app.get('*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
+});
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   next(createError(404));

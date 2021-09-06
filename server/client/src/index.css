@@ -1,0 +1,49 @@
+body {
+  font-family: "MontserratRegular";
+  font-size: calc(10px + 2vmin);
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face{
+  font-family: "MontserratRegular";
+  src: local("MontserratRegular"),
+    url("./fonts/Montserrat/Montserrat-Regular.ttf") format("truetype");
+}
+@font-face{
+  font-family: "MontserratBold";
+  src: local("MontserratBold"),
+    url("./fonts/Montserrat/Montserrat-Bold.ttf") format("truetype");
+}
+@font-face{
+  font-family: "RalewayVariable";
+  src: local("RalewayVariable"),
+    url("./fonts/Raleway/Raleway-VariableFont_wght.ttf") format("truetype");
+  font-weight: semiBold;
+}
+@font-face{
+  font-family: "RalewayVariableItalic";
+  src: local("RalewayVariableItalic"),
+    url("./fonts/Raleway/Raleway-Italic-VariableFont_wght.ttf") format("truetype");
+  font-weight: semiBold;
+}
+@font-face{
+  font-family: "PTSerif-Bold";
+  src: local("PTSerif-Bold"),
+    url("./fonts/PT_Serif/PTSerif-Bold.ttf") format("truetype");
+}@font-face{
+  font-family: "PTSerif-Regular";
+  src: local("PTSerif-Regular"),
+    url("./fonts/PT_Serif/PTSerif-Regular.ttf") format("truetype");
+}
+@font-face{
+  font-family: "PTSerif-Italic";
+  src: local("PTSerif-Italic"),
+    url("./fonts/PT_Serif/PTSerif-Italic.ttf") format("truetype");
+}
+@font-face{
+  font-family: "PTSerif-BoldItalic";
+  src: local("PTSerif-BoldItalic"),
+    url("./fonts/PT_Serif/PTSerif-BoldItalic.ttf") format("truetype");
+}

@@ -1,0 +1,90 @@
+.drawerNavigationOverlay {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    background: #fc4a1a;  /* fallback for old browsers */
+        background: -webkit-linear-gradient(to left, #f7b733, #fc4a1a);  
+        background: linear-gradient(to left, #f7b733, #fc4a1a); 
+    z-index: 8;
+  }
+  
+  .drawer {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    display: flex;
+    z-index: 9;
+    width: 100%;
+    right: 0;
+    overflow: hidden;
+    pointer-events: none;
+  }
+  
+  .menu-layer {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff;
+    z-index: -1;
+  }
+  
+  .drawerNavigation {
+    pointer-events: all;
+    position: relative;
+    width: 100%;
+    background: #0575E6;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #081236, #1303c7);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #081236, #1303c7); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    display: flex;
+    box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.75);
+    overflow-y: auto;
+    align-items: center;
+    align-content: center;
+    padding:20% 10%;
+}
+.drawer-list{
+  position: relative;
+    list-style: none;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    row-gap: 3em;
+}
+.drawer-item a{
+  font-size: 2.5em;
+  color: white ;
+  text-decoration: none;
+  text-decoration: none;
+}
+.drawer-item a:visited {
+  color: rgb(208, 208, 208) ;
+}
+.drawer-item a:hover {
+  color: rgb(208, 208, 208) ;
+}
+.drawer-item{
+  width: fit-content;
+  margin: auto;
+  position: relative;
+     margin-bottom: 3em;
+}
+.drawer-bar{
+  position:absolute;
+  z-index: 9999999999999;
+  left: 0em;
+  top:50%;
+  width: 100%;
+  height: 0.2em;
+  background: white;
+}
