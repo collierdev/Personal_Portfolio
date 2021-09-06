@@ -30,7 +30,7 @@ app.use(express.static(path.resolve(__dirname, 'client/build')));
 
 
 mongoose.connect(
-  `mongodb+srv://jwcollie:CSjMSyJLMnW3WxmA@portfolio-database.rc5fp.mongodb.net/Portfolio-Database?retryWrites=true&w=majority`, 
+  `mongodb+srv:/`, 
   {
     useNewUrlParser: true,
     useUnifiedTopology: true
