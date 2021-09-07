@@ -12,7 +12,6 @@ function Hero(props) {
   let subtitleRef = useRef();
   let buttonRef = useRef();
   const viewportWidth = props.size.width;
-  console.log(viewportWidth);
   let socialRef = useRef();
   
   useEffect(() => {

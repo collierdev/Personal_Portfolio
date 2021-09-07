@@ -1,6 +1,5 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "name": "CollierDev",
   "icons": [
     {
         "src": "/android-chrome-36x36.png",
@@ -48,7 +47,6 @@
         "type": "image/png"
     }
 ],
-  "start_url": ".",
   "display": "standalone",
   "theme_color": "#ffffff",
   "background_color": "#ffffff"

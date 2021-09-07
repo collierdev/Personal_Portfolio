@@ -7,17 +7,17 @@ import FileSaver from 'file-saver';
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import gsap from 'gsap';
-import {contactCardReveal, contactTitle,contactForm} from '../Animantion/Animation'
+import {contactCardReveal, contactTitle} from '../Animantion/Animation'
 import downloadArrow from '../images/download-arrow.svg'
 
 const schema = yup.object().shape({
-  name: yup.string().matches(/^[A-Za-z ]*$/, 'Please enter valid name').max(40).required('Required'),
+  name: yup.string().matches(/^[A-Za-z ]*$/, 'Please enter valid name').max(40).required(),
   email: yup.string().email('Invalid Email Format').required('Required'),
   message: yup.string().matches(/^[a-zA-Z0-9?$@#()'!,+\-=_:.&€£*%\s]+$/, 'Invalid entry').min(10).max(250).required(),
 });
 const Contact = (props) =>{
 
-    const { register, handleSubmit, reset } = useForm({
+    const { register, handleSubmit, reset, formState: { errors } } = useForm({
       resolver: yupResolver(schema),
     });
     const [result, setResult] = useState();
@@ -28,14 +28,11 @@ const Contact = (props) =>{
     async function getResume() {
       const response = await axios.get('/resume',{responseType: `blob`});
       const blob = new Blob([response.data], {type : "application/pdf"});
-  console.log(response);
      FileSaver.saveAs(blob, "Resume.pdf");
     }
-    const onSubmit = (data) => {
-      console.log(data);
-      postForm(data);
-      reset();
-  }
+
+
+
 
 
 
@@ -53,18 +50,11 @@ let resumeButtonRef = useRef();
 let resumeButtonImageRef = useRef();
 let contactSocialTextRef = useRef();
 let contactSocialsRef = useRef();
-let labelRef1 = useRef();
-let inputRef1 = useRef();
-let labelRef2 = useRef();
-let inputRef2 = useRef();
-let labelRef3 = useRef();
-let inputRef3 = useRef();
 let submitButtonRef = useRef();
 useEffect(() => {contactCardReveal(contactCardRef)}, [])
 
-useEffect(() => {contactTitle(contactTitleRef, contactTextRef,resumeTextRef, resumeButtonRef,contactSocialTextRef,contactSocialsRef)}, [])
+useEffect(() => {contactTitle(contactTitleRef, contactTextRef,resumeTextRef, resumeButtonRef,contactSocialTextRef)}, [])
 
-useEffect(() => {contactForm(labelRef1, inputRef1, labelRef2, inputRef2, labelRef3, inputRef3)}, [])
 
 useEffect(() => {
   const animation = gsap.fromTo(gradientRef.current, { background: b1}, {ease: "power6", duration: 3, background: b2, repeat: -1, yoyo: true});
@@ -100,7 +90,10 @@ const submitOnHover = () =>{
 const submitOnLeave =() =>{
   submitTweenRef.current.reverse();
 }
-
+const onSubmitHandler = (data) => {
+  postForm(data);
+  reset();
+};
 
     return (
       <div className="contact-page" ref={gradientRef} id={props.id}>
@@ -114,30 +107,33 @@ const submitOnLeave =() =>{
             <p className="contact-content third" ref={elem => {resumeTextRef = elem; }}>Want a look at my resume?</p>          
             <button className="resume-button" onMouseEnter={resumeOnHover} onMouseLeave={resumeOnLeave} ref={elem => {resumeButtonRef = elem; }} onClick={getResume}>
               Download Resume
-              
               <img src={downloadArrow} ref={elem => {resumeButtonImageRef = elem; }} alt="download-arrow"></img>
             </button>
             <p className="contact-content fourth" ref={elem => {contactSocialTextRef = elem; }} >Visit my socials to stay up to date on me and my coding experiments.</p>
-            <Socials ref={elem => {contactSocialsRef = elem; }} color="#4A4A4A" container="contact"></Socials>
+            <Socials ref={contactSocialsRef} color="#4A4A4A" container="contact"></Socials>
           </div>
           <div className='contact-right'>
-            <form onSubmit={handleSubmit(onSubmit)}>
+            <form onSubmit={handleSubmit(onSubmitHandler)}>
               <div>
-                <label htmlFor="name" ref={elem => {labelRef1 = elem; }}>Name *</label>
-                <input {...register("name")} placeholder="Name" type="text" id="name" required   ref={elem => {inputRef1 = elem; }} />
+                <label htmlFor="name" >Name *</label>
+                <input {...register("name")} placeholder="Name" type="text" id="name" required />
+                <p>{errors.name?.message}</p>
               </div>
               <div>
-                <label htmlFor="email"  ref={elem => {labelRef2 = elem; }}>Email *</label>
-                <input {...register("email")} placeholder="Email" type="email" id="email" required ref={elem => {inputRef2 = elem; }}/>
+                <label htmlFor="email" >Email *</label>
+                <input {...register("email")} placeholder="Email" type="email" id="email" required />
+                <p>{errors.email?.message}</p>
               </div>
               <div>
-                <label htmlFor="message" ref={elem => {labelRef3 = elem; }}>Message *</label>
-                <textarea {...register("message") }placeholder="Your message here" id="message" required ref={elem => {inputRef3 = elem; }}/>
+                <label htmlFor="message">Message *</label>
+                <textarea {...register("message") }placeholder="Your message here" id="message" required />
+                <p>{errors.message?.message}</p>
               </div>
-              {result}
-              <button className="form-button"type="submit" onMouseEnter={submitOnHover} onMouseLeave={submitOnLeave} ref={elem => {submitButtonRef = elem; }}>
+              
+              <button className="form-button" type="submit" onMouseEnter={submitOnHover} onMouseLeave={submitOnLeave} ref={elem => {submitButtonRef = elem; }}>
                 Submit 
               </button>
+              <p>{result}</p>
             </form>
           </div>
         </div>
