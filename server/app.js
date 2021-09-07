@@ -30,7 +30,7 @@ app.use(express.static(path.resolve(__dirname, 'client/build')));
 
 
 mongoose.connect(
-  `mongodb+srv:/`, 
+  `mongodb+srv://`, 
   {
     useNewUrlParser: true,
     useUnifiedTopology: true

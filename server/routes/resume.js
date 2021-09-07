@@ -8,7 +8,7 @@ try{
     console.log(fileName);
     const fileURL = path.join(__dirname, '..', 'public', 'Resume.pdf');
     console.log(fileURL);
-      res.sendFile(fileURL8);
+      res.sendFile(fileURL);
 
 } catch (e){
     console.log(e);
