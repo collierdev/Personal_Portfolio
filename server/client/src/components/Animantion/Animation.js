@@ -51,23 +51,23 @@ export const aboutTitleReveal = (title) => {
  export const contactCardReveal = (card) => { 
     gsap.from(card, { yPercent: -15, opacity: 0, stagger: 0.1, duration: 1, ease: "none", scrollTrigger: {trigger: card}});
  };
- export const contactTitle = (title,content, buttonText,button,socialText) => { 
-    gsap.from([title,content, buttonText,button,socialText], { yPercent: -15, opacity: 0, stagger: 0.1, duration: 1, ease: "none", scrollTrigger: {trigger: title, start:"top center"}});
+ export const contactTitle = (title,content, buttonText,button,socialText,socials) => { 
+    gsap.from([title,content, buttonText,button,socialText,socials], { yPercent: -15, opacity: 0, stagger: 0.1, duration: 1, ease: "none", scrollTrigger: {trigger: title, start:"top center"}});
    };
  export const resumeReveal = (content,button) => { 
     gsap.from(content, { yPercent: -15, opacity: 0, stagger: 0.1, duration: 1, ease: "none", scrollTrigger: {trigger: content}});
     gsap.from(button, { yPercent: -15, opacity: 0, stagger: 0.1, duration: 1, ease: "none", scrollTrigger: {trigger: button}});
  };
  export const heroSocialReveal = (socials) => {
-    gsap.from(socials, { xPercent: 15, opacity: 0, stagger: 0.1, duration: 1, ease: "sine",});
+    gsap.from(socials, { xPercent: +15, opacity: 0, stagger: 0.1, duration: 1, ease: "sine"});
  };
  export const heroSocialRevealMobile = (socials) => {
-    gsap.from(socials, { yPercent: -15, opacity: 0, stagger: 0.1, duration: 1, ease: "sine",});
+    gsap.from(socials, { yPercent: +20, opacity: 0, duration: 1, ease: "sine"});
  };
  export const contactSocialReveal = (socials) => {
-    gsap.from(socials, { yPercent: -15, opacity: 0, stagger: 0.1, duration: 1, ease: "sine", scrollTrigger: {trigger: socials, start:"top 80%"}});
+    gsap.from(socials, { yPercent: -15, opacity: 0, stagger: 0.1, duration: 1, ease: "sine", scrollTrigger: {trigger: socials, start:"top top"}});
  };
  export const contactForm = (name, nameInput, email, emailInput, message, messageInput) => { 
-   gsap.from([name, nameInput, email, emailInput, message, messageInput], { yPercent: -15, opacity: 0, stagger: 0.1, duration: 1, ease: "sine",scrollTrigger: {trigger: name, start:"top center"} });
+   gsap.from([name, nameInput, email, emailInput, message, messageInput], { yPercent: -15, opacity: 0, stagger: 0.1, duration: 1, ease: "sine",scrollTrigger: {trigger: name, start:"top bottom"} });
 
  };

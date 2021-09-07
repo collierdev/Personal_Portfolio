@@ -8,7 +8,6 @@ import './App.css';
 import React, {useState,useEffect} from 'react'
 import gsap from 'gsap'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Helmet from "react-helmet";
 
 import { ScrollToPlugin } from "gsap/dist/ScrollToPlugin";
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);

@@ -62,7 +62,7 @@ let inputRef3 = useRef();
 let submitButtonRef = useRef();
 useEffect(() => {contactCardReveal(contactCardRef)}, [])
 
-useEffect(() => {contactTitle(contactTitleRef, contactTextRef,resumeTextRef, resumeButtonRef,contactSocialTextRef)}, [])
+useEffect(() => {contactTitle(contactTitleRef, contactTextRef,resumeTextRef, resumeButtonRef,contactSocialTextRef,contactSocialsRef)}, [])
 
 useEffect(() => {contactForm(labelRef1, inputRef1, labelRef2, inputRef2, labelRef3, inputRef3)}, [])
 
@@ -118,7 +118,7 @@ const submitOnLeave =() =>{
               <img src={downloadArrow} ref={elem => {resumeButtonImageRef = elem; }} alt="download-arrow"></img>
             </button>
             <p className="contact-content fourth" ref={elem => {contactSocialTextRef = elem; }} >Visit my socials to stay up to date on me and my coding experiments.</p>
-            <Socials ref={contactSocialsRef} color="#4A4A4A" container="contact"></Socials>
+            <Socials ref={elem => {contactSocialsRef = elem; }} color="#4A4A4A" container="contact"></Socials>
           </div>
           <div className='contact-right'>
             <form onSubmit={handleSubmit(onSubmit)}>

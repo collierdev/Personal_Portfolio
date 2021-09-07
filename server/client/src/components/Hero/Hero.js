@@ -4,19 +4,23 @@ import Socials from "../Socials/Socials"
 import Navlink from "../Navbar/Navlink"
 import Topography from "../Topography/Topography"
 import { useEffect, useRef } from 'react';
-import { heroTextReveal } from '../Animantion/Animation'
+import { heroTextReveal, heroSocialReveal} from '../Animantion/Animation'
 import Tilt from 'react-parallax-tilt'
 
 function Hero(props) {
   let titleRef = useRef();
   let subtitleRef = useRef();
   let buttonRef = useRef();
-  let viewportWidth = props.size.width;
+  const viewportWidth = props.size.width;
+  console.log(viewportWidth);
   let socialRef = useRef();
   
   useEffect(() => {
     heroTextReveal(titleRef,subtitleRef);
-  },[]);
+  },[titleRef,subtitleRef]);
+  useEffect(() => {
+    heroSocialReveal(socialRef);
+  },[socialRef]);
     return (
       <>
         
@@ -52,9 +56,9 @@ function Hero(props) {
               </Button>
             </div>
           </div>
-          
+
           <div className="hero-right">
-            <Socials ref={socialRef} type={viewportWidth > 6? 'hero' : 'hero-mobile'}></Socials>
+          <Socials ref={elem => {socialRef = elem; }} viewWidth={viewportWidth}></Socials>
           </div>
         </div>
         

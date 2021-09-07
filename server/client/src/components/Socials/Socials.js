@@ -1,26 +1,12 @@
-import React, {useEffect} from 'react';
+import React from 'react';
 import './Socials.css';
 import gsap from 'gsap';
-import {heroSocialReveal, heroSocialRevealMobile,contactSocialReveal} from '../Animantion/Animation'
 const Socials = React.forwardRef((props, ref) => {
     let socialRef = ref;
     var color = "white";
     if(props.color){
         color = props.color;
     }
-    let type = props.type;
-    useEffect(() =>{
-        
-        if(type === "hero"){
-            heroSocialReveal(socialRef);
-        }       
-        else if (type ==="hero-mobile"){
-            heroSocialRevealMobile(socialRef);
-        } else{
-            contactSocialReveal(socialRef);
-        };
-
-    },[type,socialRef])
     
     function handleGithubOn(){
         gsap.timeline().to("#github",{opacity:1});
@@ -47,7 +33,7 @@ const Socials = React.forwardRef((props, ref) => {
         gsap.timeline().to("#youtube",{opacity:0.6});
     }
     return (
-        <div className='socials' ref={elem => {socialRef = elem; }}>
+        <div className='socials' ref={socialRef}>
             <li className="social-list">
                 <ul>
                     <a id="github" onMouseEnter={handleGithubOn} onMouseLeave={handleGithubOff} href="https://github.com/collierdev">
